@@ -1,0 +1,4 @@
+waitress
+bs4
+requests
+flask

@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from backends.utils import getHtml
+from backends.utils import getHtml,getSoup
 from backends.book import Chapter
 
 info = {
@@ -11,8 +11,7 @@ info = {
 temp_dict = {}
 
 def get_every_chapter(bookurl : str):
-    html = getHtml(bookurl,info['driver'],0.6)
-    soup = BeautifulSoup(html,features='lxml')
+    soup = getSoup(bookurl,info['driver'],0.6)
     chapters = []
     temp_dict['bookname'] = soup.select("h1")[0].text
     for chap in soup.select("a.chapter-name"):
@@ -36,6 +35,5 @@ def get_chapter_content(chapter:Chapter):
 
 def writedown(chapterTitle:str,text:str):
     with open(f"./data/《{temp_dict['bookname']}》.txt","a+",encoding='utf-8') as f:
-        f.write(chapterTitle+"\n")
         f.write(text+"\n\n")
         f.flush()
