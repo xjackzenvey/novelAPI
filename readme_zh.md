@@ -1,3 +1,5 @@
+[English](readme.md)
+
 >注意：本项目仅作为学习交流用途，请勿滥用！
 
 ## NovelAPI：高效的，可拓展的小说下载API框架

@@ -1,16 +1,18 @@
->注意：本项目仅作为学习交流用途，请勿滥用！
+[简体中文](readme_zh.md)
+
+>Warnning: The project can only used for learning.Don't abuse it!
 
 ## NovelAPI：extensive efficient framework for downloading novels for website
  #
 #### The way to call it：
-`GET 127.0.0.1:19999/novel?platform=插件名?bookurl=书籍地址`
+`GET 127.0.0.1:19999/novel?platform=<Plugin name>?bookurl=<book url>`
 ##
 #### The way to launch：
 * for Microsoft Windows：
 `pip install -r requirements.txt`
 `./start.cmd`
 * for Linux：
-`尚未测试，预计使用gunicorn服务器启动API.`
+`Not test yet.Gunicorn server is expected in the future.`
 
 ##
 #### About the plugin：
